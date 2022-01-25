@@ -16,15 +16,6 @@ var connection = mysql.createConnection({
     })
     
 
-// app.get("/", function(req, res){
-//     res.send("HELLO FROM OUR WEB APP!");
-//    });
-
-app.get("/joke", function(req, res){
-    var joke = "What do you call a dog that does magic tricks? A labracadabrador.";
-    res.send(joke);
-   });  
-
 app.get("/", function(req, res){
     var q = 'SELECT COUNT(*) as count FROM users';
     connection.query(q, function (error, results) {
